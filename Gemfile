@@ -5,6 +5,8 @@ source "http://rubygems.org"
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
+gem 'httparty'
+
 group :development do
   gem "bundler"
   gem "jeweler"
@@ -12,7 +14,6 @@ group :development do
   gem "rdoc"
   gem "shoulda"
   gem "minitest"
-  gem 'httparty'
 end
 
 group :test do
