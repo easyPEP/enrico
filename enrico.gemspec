@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "enrico.gemspec",
     "lib/enrico.rb",
     "lib/enrico/country.rb",
     "lib/enrico/vacation_day.rb",
