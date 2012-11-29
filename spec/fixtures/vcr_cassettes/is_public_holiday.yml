@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://kayaposoft.com/enrico/json/v1.0/?action=isPublicHoliday&country=ger&date=01-01-2012&region=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Nov 2012 17:17:50 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '24'
+      Connection:
+      - keep-alive
+      Vary:
+      - User-Agent,Accept-Encoding
+    body:
+      encoding: US-ASCII
+      string: ! '{"isPublicHoliday":true}'
+    http_version: 
+  recorded_at: Thu, 29 Nov 2012 17:14:16 GMT
+- request:
+    method: get
+    uri: http://kayaposoft.com/enrico/json/v1.0/?action=isPublicHoliday&country=ger&date=29-01-2012&region=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Nov 2012 17:19:13 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Vary:
+      - User-Agent,Accept-Encoding
+    body:
+      encoding: US-ASCII
+      string: ! '{"isPublicHoliday":false}'
+    http_version: 
+  recorded_at: Thu, 29 Nov 2012 17:15:38 GMT
+recorded_with: VCR 2.3.0
