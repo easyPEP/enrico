@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kalle Saas"]
   s.date = "2012-11-29"
-  s.description = "http://github.com/easyPEP/enrico"
+  s.description = "http://github.com/fluxsaas/enrico"
   s.email = "kalle@easypep.de"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -41,7 +41,7 @@ Gem::Specification.new do |s|
     "spec/lib/enrico/vacation_day_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/easyPEP/enrico"
+  s.homepage = "http://github.com/fluxsaas/enrico"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.23"
@@ -51,30 +51,30 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<httparty>, [">= 0"])
       s.add_development_dependency(%q<bundler>, [">= 0"])
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, [">= 0"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<minitest>, [">= 0"])
-      s.add_development_dependency(%q<httparty>, [">= 0"])
     else
+      s.add_dependency(%q<httparty>, [">= 0"])
       s.add_dependency(%q<bundler>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<rdoc>, [">= 0"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<minitest>, [">= 0"])
-      s.add_dependency(%q<httparty>, [">= 0"])
     end
   else
+    s.add_dependency(%q<httparty>, [">= 0"])
     s.add_dependency(%q<bundler>, [">= 0"])
     s.add_dependency(%q<jeweler>, [">= 0"])
     s.add_dependency(%q<simplecov>, [">= 0"])
     s.add_dependency(%q<rdoc>, [">= 0"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<minitest>, [">= 0"])
-    s.add_dependency(%q<httparty>, [">= 0"])
   end
 end
 
