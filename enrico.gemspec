@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "enrico"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kalle Saas"]
-  s.date = "2012-11-29"
-  s.description = "http://github.com/fluxsaas/enrico"
+  s.date = "2012-11-30"
+  s.description = "http://github.com/easyPEP/enrico"
   s.email = "kalle@easypep.de"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -41,7 +41,7 @@ Gem::Specification.new do |s|
     "spec/lib/enrico/vacation_day_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/fluxsaas/enrico"
+  s.homepage = "http://github.com/easyPEP/enrico"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.23"
