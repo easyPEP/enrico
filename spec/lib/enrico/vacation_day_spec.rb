@@ -11,7 +11,15 @@ describe Enrico::VacationDay do
       Enrico::VacationDay.new(Date.today.beginning_of_year, "Neujahrstag", "New Year's Day") 
     }
 
-    it "test different initializer methods" do
+    it "test initializer methods" do
+      rsp = {"date"=>{"day"=>1, "month"=>1, "year"=>"2012", "dayOfWeek"=>7}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
+      day = Enrico::VacationDay.new(rsp) 
+      day.date.must_equal Date.today.beginning_of_year
+      day.local_name.must_equal "Neujahrstag"
+      day.english_name.must_equal "New Year's Day"
+    end
+
+    it "test initializer methods" do
       rsp = {"date"=>{"day"=>1, "month"=>1, "year"=>"2012", "dayOfWeek"=>7}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
       day = Enrico::VacationDay.new(rsp) 
       day.date.must_equal Date.today.beginning_of_year
