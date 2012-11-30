@@ -28,7 +28,7 @@ require "enrico"
 Enrico::Country.all
 ```
 
-If you want to get in more details for a country, initial Enrico with the ’country_code’
+If you want to get in more details about a country, initial Enrico with the ’country_code’
 
 ```ruby
 country = Enrico::Country.new("ger")
@@ -51,7 +51,7 @@ country.public_holidays_for_date_range(Date.today, Date.today + 2.month)
 ```
 
 ```ruby
-country.is_public_holiday?(date)
+country.is_public_holiday?(Date.today)
 ```
 
 Installation
