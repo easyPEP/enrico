@@ -59,20 +59,30 @@ module Enrico
       vacation_days      
     end
 
+    def country_parameters(params)
+      base = { country: self.country_code, region: self.region }
+      base.merge!(params)
+      base.to_query
+    end
+
     def is_public_holiday(date)
-      JSON.parse(self.class.get("/?action=isPublicHoliday&date=#{date.strftime("%d-%m-%Y")}&country=#{URI::encode(self.country_code)}&region=#{URI::encode(self.region)}"))
+      params = country_parameters({date: date.strftime("%d-%m-%Y")})
+      JSON.parse(self.class.get("/?action=isPublicHoliday&#{params}"))
     end
 
     def get_public_holidays_for_month(date)
-      JSON.parse(self.class.get("/?action=getPublicHolidaysForMonth&month=#{date.month}&year=#{date.year}&country=#{URI::encode(self.country_code)}&region=#{URI::encode(self.region)}"))
+      params = country_parameters({month: date.month, year: date.year})
+      JSON.parse(self.class.get("/?action=getPublicHolidaysForMonth&#{params}"))
     end
 
     def get_public_holidays_for_year(date)
-      JSON.parse(self.class.get("/?action=getPublicHolidaysForYear&year=#{date.year}&country=#{URI::encode(self.country_code)}&region=#{URI::encode(self.region)}"))
+      params = country_parameters({year: date.year})
+      JSON.parse(self.class.get("/?action=getPublicHolidaysForYear&#{params}"))
     end
 
     def get_public_holidays_for_date_range(from_date, to_date)
-      JSON.parse(self.class.get("/?action=getPublicHolidaysForDateRange&fromDate=#{from_date.strftime("%d-%m-%Y")}&toDate=#{to_date.strftime("%d-%m-%Y")}&country=#{URI::encode(self.country_code)}&region=#{URI::encode(self.region)}"))
+      params = country_parameters({fromDate: from_date.strftime("%d-%m-%Y"), toDate: to_date.strftime("%d-%m-%Y")})
+      JSON.parse(self.class.get("/?action=getPublicHolidaysForDateRange&#{params}"))
     end
 
   end
