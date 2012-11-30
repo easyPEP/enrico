@@ -30,6 +30,7 @@ Enrico::Country.all
 
 If you want to get in more details for a country, initial Enrico with the ’country_code’
 
+<<<<<<< HEAD
     country = Enrico::Country.new("ger")
     country.details
     country.regions
@@ -51,6 +52,31 @@ Enrico implements only a couple of methods, which are pretty much self explenato
   ```
   country.is_public_holiday?(date)
   ```
+=======
+```ruby
+country = Enrico::Country.new("ger")
+country.details
+country.regions
+```
+
+Enrico implements only a couple of methods, which are pretty much self explenatory:
+
+```
+country.public_holidays_for_month(Date.today)
+```
+
+```
+country.public_holidays_for_year(Date.today)
+```
+
+```
+country.public_holidays_for_date_range(Date.today, Date.today + 2.month)
+```
+
+```
+country.is_public_holiday?(date)
+```
+>>>>>>> a4214e5fbbb2b9df5a0110e2a93e0b1913fec159
 
 Installation
 ------------
@@ -67,8 +93,8 @@ Documentation
 
 ### More Resources
 
-+ [Enrico API)](http://kayaposoft.com/enrico/)
-+ [Enrico JSON API)](http://kayaposoft.com/enrico/json/)
++ [Enrico](http://kayaposoft.com/enrico/)
++ [Enrico JSON API](http://kayaposoft.com/enrico/json/)
 
 
 License
