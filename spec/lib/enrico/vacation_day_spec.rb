@@ -7,21 +7,23 @@ require_relative '../../spec_helper'
 describe Enrico::VacationDay do
 
   describe "default instance attributes" do
-    let(:vacatin_date) { 
-      Enrico::VacationDay.new(Date.today.beginning_of_year, "Neujahrstag", "New Year's Day") 
+    let(:vacatin_date) {
+      Enrico::VacationDay.new(Date.today.beginning_of_year, "Neujahrstag", "New Year's Day")
     }
 
     it "test initializer methods" do
-      rsp = {"date"=>{"day"=>1, "month"=>1, "year"=>"2012", "dayOfWeek"=>7}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
-      day = Enrico::VacationDay.new(rsp) 
+      beginning_of_year = Date.today.beginning_of_year
+      rsp = {"date"=>{"day"=> beginning_of_year.day, "month" => beginning_of_year.month, "year"=>beginning_of_year.year, "dayOfWeek"=>beginning_of_year.wday}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
+      day = Enrico::VacationDay.new(rsp)
       day.date.must_equal Date.today.beginning_of_year
       day.local_name.must_equal "Neujahrstag"
       day.english_name.must_equal "New Year's Day"
     end
 
     it "test initializer methods" do
-      rsp = {"date"=>{"day"=>1, "month"=>1, "year"=>"2012", "dayOfWeek"=>7}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
-      day = Enrico::VacationDay.new(rsp) 
+      beginning_of_year = Date.today.beginning_of_year
+      rsp = {"date"=>{"day"=> beginning_of_year.day, "month" => beginning_of_year.month, "year"=>beginning_of_year.year, "dayOfWeek"=>beginning_of_year.wday}, "localName"=>"Neujahrstag", "englishName"=>"New Year's Day"}
+      day = Enrico::VacationDay.new(rsp)
       day.date.must_equal Date.today.beginning_of_year
       day.local_name.must_equal "Neujahrstag"
       day.english_name.must_equal "New Year's Day"
