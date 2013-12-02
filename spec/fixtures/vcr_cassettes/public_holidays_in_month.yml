@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kayaposoft.com/enrico/json/v1.0/?action=getPublicHolidaysForMonth&country=ger&month=1&region=&year=2012
+    uri: http://kayaposoft.com/enrico/json/v1.0/?action=getPublicHolidaysForMonth&country=ger&month=1&region=&year=2013
     body:
       encoding: US-ASCII
       string: ''
@@ -15,60 +15,19 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 29 Nov 2012 16:53:05 GMT
+      - Mon, 02 Dec 2013 17:41:33 GMT
       Content-Type:
-      - text/html
+      - application/json
       Content-Length:
-      - '115'
+      - '113'
       Connection:
       - keep-alive
       Vary:
-      - User-Agent,Accept-Encoding
+      - User-Agent
     body:
       encoding: US-ASCII
-      string: ! '[{"date":{"day":1,"month":1,"year":"2012","dayOfWeek":7},"localName":"Neujahrstag","englishName":"New
+      string: ! '[{"date":{"day":1,"month":1,"year":2013,"dayOfWeek":2},"localName":"Neujahrstag","englishName":"New
         Year''s Day"}]'
     http_version: 
-  recorded_at: Thu, 29 Nov 2012 16:49:30 GMT
-- request:
-    method: get
-    uri: http://kayaposoft.com/enrico/json/v1.0/?action=getSupportedCountries
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - nginx
-      Date:
-      - Thu, 29 Nov 2012 17:03:17 GMT
-      Content-Type:
-      - text/html
-      Content-Length:
-      - '5620'
-      Connection:
-      - keep-alive
-      Vary:
-      - User-Agent,Accept-Encoding
-    body:
-      encoding: US-ASCII
-      string: ! '[{"fullName":"Australia","countryCode":"aus","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":["Australian
-        Capital Territory","Queensland","New South Wales","Northern Territory","South
-        Australia","Tasmania","Victoria","Western Australia"]},{"fullName":"Austria","countryCode":"aut","fromDate":{"day":1,"month":1,"year":1946},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Belgium","countryCode":"bel","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Croatia","countryCode":"hrv","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Czech
-        Republic","countryCode":"cze","fromDate":{"day":1,"month":1,"year":1952},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Denmark","countryCode":"dnk","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"England","countryCode":"eng","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Estonia","countryCode":"est","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Finland","countryCode":"fin","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"France","countryCode":"fra","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":["Alsace","Moselle"]},{"fullName":"Germany","countryCode":"ger","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":["Baden-W\u00fcrttemberg","Bavaria","Berlin","Brandenburg","Bremen","Hamburg","Hesse","Mecklenburg-Vorpommern","Lower
-        Saxony","North Rhine-Westphalia","Rhineland-Palatinate","Saarland","Saxony","Saxony-Anhalt","Schleswig-Holstein","Thuringia"]},{"fullName":"Hungary","countryCode":"hun","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Iceland","countryCode":"isl","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Ireland","countryCode":"irl","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Italy","countryCode":"ita","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Japan","countryCode":"jpn","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Latvia","countryCode":"lva","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Lithuania","countryCode":"ltu","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Luxembourg","countryCode":"lux","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Netherlands","countryCode":"nld","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"New
-        Zealand","countryCode":"nzl","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":["Auckland","Canterbury","Chatham
-        Islands","Hawkes'' Bay","Marlborough","Nelson","Otago","South Canterbury","Southland","Taranaki","Wellington","Westland"]},{"fullName":"Northern
-        Ireland","countryCode":"nir","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Norway","countryCode":"nor","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Poland","countryCode":"pol","fromDate":{"day":1,"month":1,"year":1952},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Portugal","countryCode":"prt","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Serbia","countryCode":"srb","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Slovakia","countryCode":"svk","fromDate":{"day":1,"month":1,"year":1952},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Slovenia","countryCode":"svn","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"Sweden","countryCode":"swe","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]},{"fullName":"United
-        States of America","countryCode":"usa","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District
-        Of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New
-        Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode
-        Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West
-        Virginia","Wisconsin","Wyoming"]},{"fullName":"Wales","countryCode":"wal","fromDate":{"day":1,"month":1,"year":2011},"toDate":{"day":31,"month":12,"year":32767},"regions":[]}]'
-    http_version: 
-  recorded_at: Thu, 29 Nov 2012 16:59:42 GMT
+  recorded_at: Mon, 02 Dec 2013 17:41:33 GMT
 recorded_with: VCR 2.3.0
