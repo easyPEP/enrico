@@ -32,4 +32,36 @@ http_interactions:
         Year''s Day"}],"holidayType":"public_holiday"}]'
     http_version: 
   recorded_at: Wed, 08 Apr 2020 18:04:50 GMT
+- request:
+    method: get
+    uri: https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForDateRange&country=deu&fromDate=01-01-2020&region=&toDate=01-03-2020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 14 Apr 2020 09:31:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '169'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
+        Year''s Day"}],"holidayType":"public_holiday"}]'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2020 09:31:35 GMT
 recorded_with: VCR 2.8.0

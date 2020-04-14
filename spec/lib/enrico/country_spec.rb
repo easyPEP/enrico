@@ -19,7 +19,7 @@ describe Enrico::Country do
       Enrico::Country.must_include HTTParty
     end
     it "must have the base url set to the Dribble API endpoint" do
-      Enrico::Country.base_uri.must_equal 'http://kayaposoft.com/enrico/json/v2.0'
+      Enrico::Country.base_uri.must_equal 'https://kayaposoft.com/enrico/json/v2.0'
     end
   end
 

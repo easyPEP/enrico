@@ -35,9 +35,9 @@ Gem::Specification.new do |s|
     "lib/enrico/country.rb",
     "lib/enrico/vacation_day.rb",
     "spec/fixtures/vcr_cassettes/is_public_holiday.yml",
-    "spec/fixtures/vcr_cassettes/public_holidays_in_date_range.yml",
-    "spec/fixtures/vcr_cassettes/public_holidays_in_month.yml",
-    "spec/fixtures/vcr_cassettes/public_holidays_in_year.yml",
+    "spec/fixtures/vcr_cassettes/holidays_in_date_range.yml",
+    "spec/fixtures/vcr_cassettes/holidays_in_month.yml",
+    "spec/fixtures/vcr_cassettes/holidays_in_year.yml",
     "spec/fixtures/vcr_cassettes/supported_countries.yml",
     "spec/lib/enrico/country_public_holidays_for_month_spec.rb",
     "spec/lib/enrico/country_spec.rb",
@@ -80,4 +80,3 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<minitest>, [">= 0"])
   end
 end
-

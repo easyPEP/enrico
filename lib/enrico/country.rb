@@ -7,7 +7,7 @@ module Enrico
 
     include HTTParty
 
-    base_uri 'http://kayaposoft.com/enrico/json/v2.0'
+    base_uri 'https://kayaposoft.com/enrico/json/v2.0'
 
     def initialize(country_code, region = nil)
       self.country_code = country_code
@@ -59,7 +59,7 @@ module Enrico
       vacation_days
     end
 
-    def country_parameters(params, holiday_type: holiday_type)
+    def country_parameters(params, holiday_type: nil)
       {
         country: self.country_code,
         region: self.region
