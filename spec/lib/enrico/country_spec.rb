@@ -19,7 +19,7 @@ describe Enrico::Country do
       Enrico::Country.must_include HTTParty
     end
     it "must have the base url set to the Dribble API endpoint" do
-      Enrico::Country.base_uri.must_equal 'http://kayaposoft.com/enrico/json/v1.0'
+      Enrico::Country.base_uri.must_equal 'https://kayaposoft.com/enrico/json/v2.0'
     end
   end
 
@@ -30,7 +30,7 @@ describe Enrico::Country do
     end
 
     describe "get list of all supported countries" do
-      
+
       it "must have all method" do
         Enrico::Country.must_respond_to :all
       end
@@ -42,21 +42,21 @@ describe Enrico::Country do
     end
 
     describe "default instance attributes" do
-      let(:country) { Enrico::Country.new("ger") }
+      let(:country) { Enrico::Country.new("deu") }
 
       it "must have an country_code attribute" do
         country.must_respond_to :country_code
       end
 
       it "must have the right id" do
-        country.country_code.must_equal 'ger'
+        country.country_code.must_equal 'deu'
       end
 
     end
 
     describe "get list of all supported countries" do
 
-      let(:country) { Enrico::Country.new("ger") }
+      let(:country) { Enrico::Country.new("deu") }
 
       it "must have a country method" do
         country.must_respond_to :details
@@ -77,7 +77,7 @@ describe Enrico::Country do
       end
 
       it "should respond with regions" do
-        regions = ["Baden-Württemberg", "Bavaria", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hesse", "Mecklenburg-Vorpommern", "Lower Saxony", "North Rhine-Westphalia", "Rhineland-Palatinate", "Saarland", "Saxony", "Saxony-Anhalt", "Schleswig-Holstein", "Thuringia"]
+        regions = ["bw", "by", "be", "bb", "hb", "hh", "he", "ni", "mv", "nw", "rp", "sl", "sn", "st", "sh", "th"]
         country.regions.must_be_instance_of Array
         country.regions.must_equal regions
       end
@@ -87,4 +87,3 @@ describe Enrico::Country do
   end
 
 end
-

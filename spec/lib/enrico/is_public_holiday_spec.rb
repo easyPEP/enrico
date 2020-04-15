@@ -14,7 +14,7 @@ describe Enrico::Country do
       VCR.eject_cassette
     end
 
-    let(:country) { Enrico::Country.new("ger") }
+    let(:country) { Enrico::Country.new("deu") }
 
     it "should trueify that date is public holiday" do
       date = Date.today.beginning_of_year
@@ -29,4 +29,3 @@ describe Enrico::Country do
   end
 
 end
-

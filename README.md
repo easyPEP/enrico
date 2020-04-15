@@ -1,18 +1,18 @@
 enrico
 ===========
 
-enrico is a small wrapper around the JSON API from [enrico](http://kayaposoft.com/enrico/json/)
+enrico is a small wrapper around the JSON API from [enrico v2](http://kayaposoft.com/enrico/json/)
 
 The Enrico Service
 ------------------
 
 ```
-Enrico Service is a free service written in PHP providing public holidays for several 
-countries. You can use either web service or json to get public holidays from Enrico. 
-Each provided public holiday includes date and name of the holiday in the local language 
-and English. Public holidays for the countries like U.S. or Germany are provided separately for each state. 
-You can use Enrico Service to display public holidays on your website or in your desktop application written in any programming language. 
-lthough Enrico is free to use, we do not provide the source code for download. If you are interested in hosting Enrico on your 
+Enrico Service is a free service written in PHP providing public holidays for several
+countries. You can use either web service or json to get public holidays from Enrico.
+Each provided public holiday includes date and name of the holiday in the local language
+and English. Public holidays for the countries like U.S. or Germany are provided separately for each state.
+You can use Enrico Service to display public holidays on your website or in your desktop application written in any programming language.
+lthough Enrico is free to use, we do not provide the source code for download. If you are interested in hosting Enrico on your
 server, please contact us on enrico@kayaposoft.com.
 ```
 
@@ -39,15 +39,18 @@ country.regions
 enrico implements only a couple of methods, which are pretty much self explanatory:
 
 ```ruby
-country.public_holidays_for_month(Date.today)
+country.holidays_for_month(Date.today)
+country.holidays_for_month(Date.today, holiday_type: 'public_holiday')
 ```
 
 ```ruby
-country.public_holidays_for_year(Date.today)
+country.holidays_for_year(Date.today)
+country.holidays_for_year(Date.today, holiday_type: 'public_holiday')
 ```
 
 ```ruby
-country.public_holidays_for_date_range(Date.today, Date.today + 2.month)
+country.holidays_for_year(Date.today)
+country.holidays_for_year(Date.today, holiday_type: 'public_holiday')
 ```
 
 ```ruby
@@ -80,7 +83,7 @@ Copyright (c) 2012 easyPEP UG
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
-"Software"), to use, copy and modify copies of the Software, subject 
+"Software"), to use, copy and modify copies of the Software, subject
 to the following conditions:
 
 The above copyright notice and this permission notice shall be
