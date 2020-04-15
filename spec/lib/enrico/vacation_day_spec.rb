@@ -27,5 +27,26 @@ describe Enrico::VacationDay do
       day.local_name.must_equal "Neujahrstag"
       day.english_name.must_equal "New Year's Day"
     end
+
+    describe 'when country has only one language' do
+      it "returns same names" do
+        beginning_of_year = Date.today.beginning_of_year
+        rsp = {
+          "date"=>{"day"=> beginning_of_year.day, "month" => beginning_of_year.month, "year"=>beginning_of_year.year, "dayOfWeek"=>beginning_of_year.wday},
+          "name"=>[
+            {
+              "lang"=>"en",
+              "text"=>"New Year's Day"
+            }
+          ],
+          "holidayType"=>"public_holiday"
+        }
+        day = Enrico::VacationDay.new(rsp)
+        day.date.must_equal Date.today.beginning_of_year
+        day.local_name.must_equal "New Year's Day"
+        day.english_name.must_equal "New Year's Day"
+      end
+
+    end
   end
 end
