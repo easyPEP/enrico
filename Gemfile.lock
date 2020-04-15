@@ -56,7 +56,7 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     rack (1.5.2)
-    rake (10.1.0)
+    rake (12.3.3)
     rdoc (4.0.1)
       json (~> 1.4)
     safe_yaml (0.9.7)
