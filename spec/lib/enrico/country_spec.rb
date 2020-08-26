@@ -36,7 +36,8 @@ describe Enrico::Country do
       end
 
       it "must parse the api response from JSON to Hash" do
-        Enrico::Country.all.must_be_instance_of Array
+        Enrico::Country.all.must_be_instance_of HTTParty::Response
+        Enrico::Country.all.to_a.must_be_instance_of Array
       end
 
     end
