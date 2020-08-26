@@ -9,7 +9,7 @@ gem 'httparty', '0.18.1'
 
 group :development do
   gem "bundler"
-  gem "jeweler", "1.8.8"
+  gem "jeweler"
   gem "simplecov"
   gem "rdoc"
   gem "shoulda"
@@ -17,7 +17,7 @@ group :development do
 end
 
 group :test do
-  gem 'webmock', "< 1.9"
+  gem 'webmock'
   gem 'vcr'
   gem 'turn'
   gem 'rake'
