@@ -1,16 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (5.2.4.3)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ansi (1.5.0)
     builder (3.2.4)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.2.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
@@ -34,7 +34,7 @@ GEM
     httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
-    i18n (1.8.5)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     jeweler (2.3.5)
       builder
@@ -85,8 +85,8 @@ GEM
     thread_safe (0.3.6)
     turn (0.9.6)
       ansi
-    tzinfo (1.2.7)
-      thread_safe (~> 0.1)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
     vcr (6.0.0)
     webmock (3.8.3)
       addressable (>= 2.3.6)
