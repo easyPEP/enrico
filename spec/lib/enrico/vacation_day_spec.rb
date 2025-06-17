@@ -23,9 +23,9 @@ describe Enrico::VacationDay do
         "holidayType"=>"public_holiday"
       }
       day = Enrico::VacationDay.new(rsp)
-      day.date.must_equal Date.today.beginning_of_year
-      day.local_name.must_equal "Neujahrstag"
-      day.english_name.must_equal "New Year's Day"
+      _(day.date).must_equal Date.today.beginning_of_year
+      _(day.local_name).must_equal "Neujahrstag"
+      _(day.english_name).must_equal "New Year's Day"
     end
 
     describe 'when country has only one language' do
@@ -42,9 +42,9 @@ describe Enrico::VacationDay do
           "holidayType"=>"public_holiday"
         }
         day = Enrico::VacationDay.new(rsp)
-        day.date.must_equal Date.today.beginning_of_year
-        day.local_name.must_equal "New Year's Day"
-        day.english_name.must_equal "New Year's Day"
+        _(day.date).must_equal Date.today.beginning_of_year
+        _(day.local_name).must_equal "New Year's Day"
+        _(day.english_name).must_equal "New Year's Day"
       end
 
     end

@@ -18,12 +18,12 @@ describe Enrico::Country do
 
     it "should trueify that date is public holiday" do
       date = Date.parse('2020-01-01')
-      country.is_public_holiday?(date).must_equal true
+      _(country.is_public_holiday?(date)).must_equal true
     end
 
     it "should falsify that date is public holiday" do
       date = Date.parse('2020-01-29')
-      country.is_public_holiday?(date).must_equal false
+      _(country.is_public_holiday?(date)).must_equal false
     end
 
   end
