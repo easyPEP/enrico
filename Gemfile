@@ -8,7 +8,7 @@ ruby '2.6.10'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
-gem 'httparty', '0.18.1'
+gem 'httparty', '~> 0.21.0'
 
 group :development do
   gem "bundler"
