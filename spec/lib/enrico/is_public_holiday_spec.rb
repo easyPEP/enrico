@@ -8,7 +8,7 @@ describe Enrico::Country do
 
   describe "GET isPublicHoliday" do
     before(:each) do
-      VCR.insert_cassette 'is_public_holiday', :record => :new_episodes
+      VCR.insert_cassette 'is_public_holiday'
     end
     after(:each) do
       VCR.eject_cassette

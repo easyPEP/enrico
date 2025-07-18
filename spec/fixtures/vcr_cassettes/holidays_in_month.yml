@@ -2,68 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForMonth&country=deu&month=1&region=&year=2020
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Wed, 08 Apr 2020 18:04:51 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
-        Year''s Day"}],"holidayType":"public_holiday"}]'
-  recorded_at: Wed, 08 Apr 2020 18:04:50 GMT
-- request:
-    method: get
-    uri: https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForMonth&country=deu&month=1&region=&year=2020
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Tue, 14 Apr 2020 09:31:33 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '169'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
-        Year''s Day"}],"holidayType":"public_holiday"}]'
-  recorded_at: Tue, 14 Apr 2020 09:31:35 GMT
-- request:
-    method: get
     uri: https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForMonth&country=deu&month=1&year=2020
     body:
       encoding: US-ASCII
@@ -83,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Fri, 18 Jul 2025 12:58:11 GMT
+      - Fri, 18 Jul 2025 13:15:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -102,5 +40,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
         Year''s Day"}],"holidayType":"public_holiday"}]'
-  recorded_at: Fri, 18 Jul 2025 12:57:45 GMT
+  recorded_at: Fri, 18 Jul 2025 13:15:28 GMT
 recorded_with: VCR 6.3.1

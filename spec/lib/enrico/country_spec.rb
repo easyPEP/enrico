@@ -7,7 +7,7 @@ require_relative '../../spec_helper'
 describe Enrico::Country do
 
   before(:each) do
-    VCR.insert_cassette 'supported_countries', :record => :new_episodes
+    VCR.insert_cassette 'supported_countries'
   end
 
   after(:each) do
@@ -89,7 +89,7 @@ describe Enrico::Country do
 
   describe "method_missing" do
     let(:country) { Enrico::Country.new("deu") }
-    
+
     before do
       # Mock the details method to return a hash with test data
       def country.details

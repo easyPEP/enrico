@@ -2,126 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=29-01-2020&region=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Wed, 08 Apr 2020 18:04:51 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '25'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '{"isPublicHoliday":false}'
-  recorded_at: Wed, 08 Apr 2020 18:04:50 GMT
-- request:
-    method: get
-    uri: http://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=01-01-2020&region=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Wed, 08 Apr 2020 18:04:51 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '24'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '{"isPublicHoliday":true}'
-  recorded_at: Wed, 08 Apr 2020 18:04:51 GMT
-- request:
-    method: get
-    uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=01-01-2020&region=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Tue, 14 Apr 2020 09:34:53 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '24'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '{"isPublicHoliday":true}'
-  recorded_at: Tue, 14 Apr 2020 09:34:55 GMT
-- request:
-    method: get
-    uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=29-01-2020&region=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Server:
-      - openresty
-      Date:
-      - Tue, 14 Apr 2020 09:34:53 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '25'
-      Connection:
-      - keep-alive
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Origin:
-      - "*"
-    body:
-      encoding: UTF-8
-      string: '{"isPublicHoliday":false}'
-  recorded_at: Tue, 14 Apr 2020 09:34:55 GMT
-- request:
-    method: get
     uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=01-01-2020
     body:
       encoding: US-ASCII
@@ -141,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Fri, 18 Jul 2025 12:58:11 GMT
+      - Fri, 18 Jul 2025 13:16:10 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -159,7 +39,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":true}'
-  recorded_at: Fri, 18 Jul 2025 12:57:45 GMT
+  recorded_at: Fri, 18 Jul 2025 13:15:44 GMT
 - request:
     method: get
     uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=29-01-2020
@@ -181,7 +61,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Fri, 18 Jul 2025 12:58:11 GMT
+      - Fri, 18 Jul 2025 13:18:13 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -199,5 +79,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":false}'
-  recorded_at: Fri, 18 Jul 2025 12:57:45 GMT
+  recorded_at: Fri, 18 Jul 2025 13:17:47 GMT
 recorded_with: VCR 6.3.1
