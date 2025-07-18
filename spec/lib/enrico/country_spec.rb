@@ -87,4 +87,75 @@ describe Enrico::Country do
 
   end
 
+  describe "method_missing" do
+    let(:country) { Enrico::Country.new("deu") }
+    
+    before do
+      # Mock the details method to return a hash with test data
+      def country.details
+        {
+          "fullName" => "Germany",
+          "countryCode" => "deu",
+          "fromDate" => {"day"=>1, "month"=>1, "year"=>2011},
+          "toDate" => {"day"=>31, "month"=>12, "year"=>32767}
+        }
+      end
+    end
+
+    it "converts snake_case method names to camelCase for accessing details" do
+      _(country.full_name).must_equal "Germany"
+      _(country.country_code).must_equal "deu"
+    end
+
+    it "handles already camelCase properties" do
+      _(country.fromDate).must_equal({"day"=>1, "month"=>1, "year"=>2011})
+      _(country.toDate).must_equal({"day"=>31, "month"=>12, "year"=>32767})
+    end
+
+    it "raises NoMethodError for non-existent properties" do
+      assert_raises(NoMethodError) do
+        country.non_existent_property
+      end
+    end
+  end
+
+  describe "country_parameters" do
+    let(:country) { Enrico::Country.new("deu", "by") }
+    let(:country_no_region) { Enrico::Country.new("deu") }
+
+    it "includes country code and region in parameters" do
+      params = country.country_parameters({month: 1, year: 2024})
+      _(params).must_include "country=deu"
+      _(params).must_include "region=by"
+      _(params).must_include "month=1"
+      _(params).must_include "year=2024"
+    end
+
+    it "excludes nil region from parameters" do
+      params = country_no_region.country_parameters({month: 1, year: 2024})
+      _(params).must_include "country=deu"
+      _(params).wont_include "region="
+    end
+
+    it "includes holiday_type when provided and not empty" do
+      params = country.country_parameters({month: 1}, holiday_type: "public_holiday")
+      _(params).must_include "holidayType=public_holiday"
+    end
+
+    it "excludes holiday_type when nil" do
+      params = country.country_parameters({month: 1}, holiday_type: nil)
+      _(params).wont_include "holidayType"
+    end
+
+    it "excludes holiday_type when empty string" do
+      params = country.country_parameters({month: 1}, holiday_type: "")
+      _(params).wont_include "holidayType"
+    end
+
+    it "properly encodes parameters for URL" do
+      params = country.country_parameters({date: "01-01-2024"})
+      _(params).must_equal "country=deu&region=by&date=01-01-2024"
+    end
+  end
+
 end
