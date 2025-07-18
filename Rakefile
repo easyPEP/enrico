@@ -11,20 +11,6 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "enrico"
-  gem.homepage = "https://github.com/easyPEP/enrico"
-  gem.license = "MIT"
-  gem.summary = "A ruby wrapper around enrico holiday API"
-  gem.description = "https://github.com/easyPEP/enrico"
-  gem.email = "kalle@easypep.de"
-  gem.authors = ["Kalle Saas"]
-  # dependencies defined in Gemfile
-end
-Jeweler::RubygemsDotOrgTasks.new
-
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'

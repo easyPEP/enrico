@@ -8,7 +8,7 @@ describe Enrico::Country do
 
   describe "GET getHolidaysForMonth" do
     before(:each) do
-      VCR.insert_cassette 'holidays_in_month', :record => :new_episodes
+      VCR.insert_cassette 'holidays_in_month'
     end
 
     after(:each) do
@@ -26,7 +26,7 @@ describe Enrico::Country do
 
   describe "GET getHolidaysForYear" do
     before(:each) do
-      VCR.insert_cassette 'holidays_in_year', :record => :new_episodes
+      VCR.insert_cassette 'holidays_in_year'
     end
 
     after(:each) do
@@ -48,7 +48,7 @@ describe Enrico::Country do
 
   describe "GET getForDateRange" do
     before(:each) do
-      VCR.insert_cassette 'holidays_in_date_range', :record => :new_episodes
+      VCR.insert_cassette 'holidays_in_date_range'
     end
 
     after(:each) do

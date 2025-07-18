@@ -1,6 +1,6 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-ruby '2.6.10'
+ruby '3.2.8'
 
 # Add dependencies required to use your gem here.
 # Example:
@@ -12,16 +12,14 @@ gem 'httparty', '~> 0.21.0'
 
 group :development do
   gem "bundler"
-  gem "jeweler"
   gem "simplecov"
   gem "rdoc"
   gem "shoulda"
-  gem "minitest"
+  gem "minitest", "~> 5.0"
 end
 
 group :test do
   gem 'webmock'
   gem 'vcr'
-  gem 'turn'
   gem 'rake'
 end
