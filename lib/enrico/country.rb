@@ -43,7 +43,7 @@ module Enrico
     end
 
     def method_missing(name, *args, &block)
-      method_name = name.to_s.camelize(:lower)
+      method_name = name.to_s.gsub(/_([a-z])/) { $1.upcase }
       details.has_key?(method_name) ? details[method_name] : super
     end
 
@@ -60,13 +60,13 @@ module Enrico
     end
 
     def country_parameters(params, holiday_type: nil)
-      {
+      result = {
         country: self.country_code,
         region: self.region
-      }
-      .merge(params)
-      .tap { |result| result[:holidayType] = holiday_type if holiday_type.present? }
-      .to_query
+      }.merge(params)
+      result[:holidayType] = holiday_type if holiday_type && !holiday_type.empty?
+
+      URI.encode_www_form(result.compact)
     end
 
     def is_public_holiday(date)

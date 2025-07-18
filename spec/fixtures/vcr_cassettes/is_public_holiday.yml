@@ -29,7 +29,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":false}'
-    http_version: 
   recorded_at: Wed, 08 Apr 2020 18:04:50 GMT
 - request:
     method: get
@@ -60,7 +59,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":true}'
-    http_version: 
   recorded_at: Wed, 08 Apr 2020 18:04:51 GMT
 - request:
     method: get
@@ -91,7 +89,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":true}'
-    http_version: 
   recorded_at: Tue, 14 Apr 2020 09:34:55 GMT
 - request:
     method: get
@@ -122,6 +119,85 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"isPublicHoliday":false}'
-    http_version: 
   recorded_at: Tue, 14 Apr 2020 09:34:55 GMT
-recorded_with: VCR 2.8.0
+- request:
+    method: get
+    uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=01-01-2020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 18 Jul 2025 12:58:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '24'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=10
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"isPublicHoliday":true}'
+  recorded_at: Fri, 18 Jul 2025 12:57:45 GMT
+- request:
+    method: get
+    uri: https://kayaposoft.com/enrico/json/v2.0/?action=isPublicHoliday&country=deu&date=29-01-2020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 18 Jul 2025 12:58:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=10
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"isPublicHoliday":false}'
+  recorded_at: Fri, 18 Jul 2025 12:57:45 GMT
+recorded_with: VCR 6.3.1
