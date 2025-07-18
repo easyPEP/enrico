@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
-  s.authors = ["Kalle Saas", "Martin Gregoire"]
-  s.date = "2025-06-17"
+  s.authors = ["Kalle Saas".freeze]
+  s.date = "2025-07-18"
   s.description = "https://github.com/easyPEP/enrico".freeze
   s.email = "kalle@easypep.de".freeze
   s.extra_rdoc_files = [
@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".github/workflows/test.yml",
+    ".ruby-version",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -32,6 +34,7 @@ Gem::Specification.new do |s|
     "lib/enrico.rb",
     "lib/enrico/country.rb",
     "lib/enrico/vacation_day.rb",
+    "mise.toml",
     "spec/fixtures/vcr_cassettes/holidays_in_date_range.yml",
     "spec/fixtures/vcr_cassettes/holidays_in_month.yml",
     "spec/fixtures/vcr_cassettes/holidays_in_year.yml",
