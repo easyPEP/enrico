@@ -30,7 +30,6 @@ http_interactions:
       encoding: UTF-8
       string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
         Year''s Day"}],"holidayType":"public_holiday"}]'
-    http_version: 
   recorded_at: Wed, 08 Apr 2020 18:04:50 GMT
 - request:
     method: get
@@ -62,6 +61,50 @@ http_interactions:
       encoding: UTF-8
       string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
         Year''s Day"}],"holidayType":"public_holiday"}]'
-    http_version: 
   recorded_at: Tue, 14 Apr 2020 09:31:35 GMT
-recorded_with: VCR 2.8.0
+- request:
+    method: get
+    uri: https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForDateRange&country=deu&fromDate=01-01-2020&region=&toDate=31-03-2020
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 17 Jun 2025 12:38:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=10
+      Vary:
+      - Accept-Encoding
+      Access-Control-Allow-Origin:
+      - "*"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"date":{"day":1,"month":1,"year":2020,"dayOfWeek":3},"name":[{"lang":"de","text":"Neujahrstag"},{"lang":"en","text":"New
+        Year''s Day"}],"holidayType":"public_holiday"},{"date":{"day":8,"month":3,"year":2020,"dayOfWeek":7},"name":[{"lang":"de","text":"Internationaler
+        Frauentag"},{"lang":"en","text":"International Women''s Day"}],"holidayType":"other_day"},{"date":{"day":29,"month":3,"year":2020,"dayOfWeek":7},"name":[{"lang":"de","text":"Beginn
+        der Sommerzeit"},{"lang":"en","text":"Daylight Saving Time Starts"}],"note":[{"lang":"de","text":"Die
+        Uhr wird um eine Stunde von 2:00 Uhr auf 3:00 Uhr vorgestellt"},{"lang":"en","text":"A
+        one-hour shift occurs at 02:00 local time, the clock jumps forward to 03:00"}],"holidayType":"other_day"}]'
+  recorded_at: Tue, 17 Jun 2025 12:38:32 GMT
+recorded_with: VCR 6.0.0

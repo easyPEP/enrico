@@ -17,13 +17,13 @@ describe Enrico::Country do
     let(:country) { Enrico::Country.new("deu") }
 
     it "should trueify that date is public holiday" do
-      date = Date.today.beginning_of_year
-      country.is_public_holiday?(date).must_equal true
+      date = Date.parse('2020-01-01')
+      _(country.is_public_holiday?(date)).must_equal true
     end
 
     it "should falsify that date is public holiday" do
-      date = Date.today.beginning_of_year + 28.days
-      country.is_public_holiday?(date).must_equal false
+      date = Date.parse('2020-01-29')
+      _(country.is_public_holiday?(date)).must_equal false
     end
 
   end

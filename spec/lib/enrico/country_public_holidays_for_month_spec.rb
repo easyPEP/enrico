@@ -16,11 +16,11 @@ describe Enrico::Country do
     end
     let(:country) { Enrico::Country.new("deu") }
     it "should return all holidays in month" do
-      date                      = Date.today.beginning_of_year
-      dates                     = country.holidays_for_month(date)
-      dates.first.date          = Date.today.beginning_of_year
-      dates.first.local_name    = "Neujahrstag"
-      dates.first.english_name  = "New Year's Day"
+      dates = country.holidays_for_month(Date.parse('2020-01-15'))
+
+      _(dates.first.date).must_equal Date.parse('2020-01-01')
+      _(dates.first.local_name).must_equal "Neujahrstag"
+      _(dates.first.english_name).must_equal "New Year's Day"
     end
   end
 
@@ -33,12 +33,16 @@ describe Enrico::Country do
       VCR.eject_cassette
     end
     let(:country) { Enrico::Country.new("deu") }
-    it "should return all holidays in month" do
-      date                      = Date.today.beginning_of_year
-      dates                     = country.holidays_for_year(date)
-      dates.first.date          = Date.today.beginning_of_year
-      dates.first.local_name    = "Neujahrstag"
-      dates.first.english_name  = "New Year's Day"
+    it "should return all holidays in year" do
+      dates = country.holidays_for_year(Date.parse('2020-06-01'))
+
+      _(dates.first.date).must_equal Date.parse('2020-01-01')
+      _(dates.first.local_name).must_equal "Neujahrstag"
+      _(dates.first.english_name).must_equal "New Year's Day"
+
+      _(dates.last.date).must_equal Date.parse('2020-12-26')
+      _(dates.last.local_name).must_equal "Zweiter Weihnachtsfeiertag"
+      _(dates.last.english_name).must_equal "Boxing Day"
     end
   end
 
@@ -52,14 +56,15 @@ describe Enrico::Country do
     end
     let(:country) { Enrico::Country.new("deu") }
     it "should return all holidays in date range" do
-      start_date = Date.today.beginning_of_year
-      end_date = Date.today.beginning_of_year + 2.month
+      dates = country.holidays_for_date_range(Date.parse('2020-01-01'), Date.parse('2020-03-31'))
 
-      dates = country.holidays_for_date_range(start_date, end_date)
+      _(dates.first.date).must_equal Date.parse('2020-01-01')
+      _(dates.first.local_name).must_equal "Neujahrstag"
+      _(dates.first.english_name).must_equal "New Year's Day"
 
-      dates.first.date          = Date.today.beginning_of_year
-      dates.first.local_name    = "Neujahrstag"
-      dates.first.english_name  = "New Year's Day"
+      _(dates.last.date).must_equal Date.parse('2020-03-29')
+      _(dates.last.local_name).must_equal "Beginn der Sommerzeit"
+      _(dates.last.english_name).must_equal "Daylight Saving Time Starts"
     end
   end
 

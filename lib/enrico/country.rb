@@ -7,7 +7,7 @@ module Enrico
 
     include HTTParty
 
-    base_uri 'kayaposoft.com/enrico/json/v2.0'
+    base_uri 'https://kayaposoft.com/enrico/json/v2.0'
 
     def initialize(country_code, region = nil)
       self.country_code = country_code
