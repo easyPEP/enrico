@@ -64,7 +64,7 @@ GEM
     stringio (3.1.7)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    uri (1.0.3)
+    uri (1.0.4)
     vcr (6.3.1)
       base64
     webmock (3.25.1)
