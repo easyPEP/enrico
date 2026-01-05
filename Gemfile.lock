@@ -18,18 +18,20 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.3.0)
     benchmark (0.4.1)
-    bigdecimal (3.2.2)
+    bigdecimal (4.0.1)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
     crack (1.0.0)
       bigdecimal
       rexml
+    csv (3.3.5)
     date (3.4.1)
     docile (1.4.1)
     drb (2.2.3)
     erb (5.0.2)
     hashdiff (1.2.0)
-    httparty (0.21.0)
+    httparty (0.24.0)
+      csv
       mini_mime (>= 1.0.0)
       multi_xml (>= 0.5.2)
     i18n (1.14.7)
@@ -37,8 +39,8 @@ GEM
     logger (1.7.0)
     mini_mime (1.1.5)
     minitest (5.25.5)
-    multi_xml (0.7.2)
-      bigdecimal (~> 3.1)
+    multi_xml (0.8.0)
+      bigdecimal (>= 3.1, < 5)
     psych (5.2.6)
       date
       stringio
@@ -78,7 +80,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
-  httparty (~> 0.21.0)
+  httparty (~> 0.24.0)
   minitest (~> 5.0)
   rake
   rdoc
