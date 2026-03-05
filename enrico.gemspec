@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name = "enrico".freeze
-  s.version = "0.2.3"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Kalle Saas".freeze, "Martin Gregoire".freeze]
-  s.date = "2026-01-06"
+  s.date = "2026-03-05"
   s.description = "https://github.com/easyPEP/enrico".freeze
   s.email = "kalle@easypep.de".freeze
   s.extra_rdoc_files = [

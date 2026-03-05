@@ -22,18 +22,18 @@ module Enrico
       self.class.all.select{|country| country["countryCode"] == self.country_code }.first
     end
 
-    def holidays_for_month(date)
-      response = self.get_holidays_for_month(date)
+    def holidays_for_month(date, holiday_type: nil)
+      response = self.get_holidays_for_month(date, holiday_type:)
       self.vacation_days_from_response(response)
     end
 
-    def holidays_for_year(date)
-      response = self.get_holidays_for_year(date)
+    def holidays_for_year(date, holiday_type: nil)
+      response = self.get_holidays_for_year(date, holiday_type:)
       self.vacation_days_from_response(response)
     end
 
-    def holidays_for_date_range(from_date, to_date)
-      response = self.get_holidays_for_date_range(from_date, to_date)
+    def holidays_for_date_range(from_date, to_date, holiday_type: nil)
+      response = self.get_holidays_for_date_range(from_date, to_date, holiday_type:)
       self.vacation_days_from_response(response)
     end
 
